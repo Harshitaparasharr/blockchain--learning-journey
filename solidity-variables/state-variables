@@ -1,0 +1,26 @@
+ State Variables
+
+Definition: Variables whose values are stored on the blockchain.
+
+Scope: Accessible by all functions in the contract.
+
+Persistence: Values remain on the blockchain until updated.
+
+Declaration: Declared outside functions in the contract.
+
+Example:
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract demo { 
+
+    string public name;
+        uint public class;
+    function setAge () public {
+    class = 10;
+    name= "harshita";
+    }
+    
+}
+  
