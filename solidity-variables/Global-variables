@@ -1,0 +1,19 @@
+3. Global Variables
+
+Definition: Special variables provided by Ethereum that are available anywhere in the contract.
+
+Purpose: Provide information about the blockchain, transaction, or environment.
+
+example ;
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract global { 
+
+    function getter () public view returns (uint block_no , uint timestamp , address msgsender) {
+    return (block.number,block.timestamp,msg.sender);
+    }
+    
+}
+  
