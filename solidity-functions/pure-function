@@ -1,0 +1,20 @@
+pure Functions
+
+Definition: Functions marked with pure cannot read or modify state variables.
+
+Use case: When you only need to work with local variables, parameters, or calculations, not the blockchain state.
+
+Gas cost: Same as view — free when called externally, but costs gas if used inside a transaction.
+
+Example://SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract global { 
+uint public age = 20;
+    function getter () public pure returns (uint) {
+        uint roll= 204;
+        return roll;
+    }
+    }
+    
