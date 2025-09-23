@@ -1,0 +1,23 @@
+view Functions
+
+Definition: Functions marked with view can read state variables but cannot modify them.
+
+Use case: When you want to read data from the blockchain without making changes.
+
+Gas cost:
+
+If called externally (without a transaction) → no gas is used.
+
+If called inside another transaction → still consumes gas because blockchain execution is happening.
+
+  example ; //SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract global { 
+uint public age = 20;
+    function getter () public view returns (uint) {
+        return age;
+    }
+    }
+    
