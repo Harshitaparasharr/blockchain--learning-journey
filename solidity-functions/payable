@@ -1,0 +1,40 @@
+payable in Solidity
+
+payable allows a function or address to receive Ether.
+
+Without payable, contracts/functions cannot accept Ether.
+
+msg.value → amount of Ether sent.
+
+address(this).balance → total balance of contract.
+
+ payable functions → receive Ether.
+
+payable addresses → can be sent Ether.
+
+
+
+example ::
+
+
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract pay {
+
+    address payable user = payable(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
+
+function payether() public payable {
+
+} 
+
+function getbalance () public view returns (uint)
+ {
+ return address (this).balance;
+}
+
+function sendetheraccount() public {
+    user .transfer(1 ether);
+}
+}
