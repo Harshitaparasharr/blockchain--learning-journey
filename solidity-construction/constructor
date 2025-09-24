@@ -1,0 +1,40 @@
+
+
+Constructor in Solidity
+🔹 Definition
+
+A constructor is a special function in Solidity that runs only once, when the contract is deployed.
+
+Used to initialize state variables or set up contract logic at the time of deployment.
+
+🔹 Key Points
+
+Declared with the keyword constructor.
+
+Executed automatically at contract deployment.
+
+Cannot be called again after deployment.
+
+Only one constructor is allowed per contract.
+
+Can be public (default) or internal.
+
+If not defined, Solidity creates a default empty constructor.
+
+
+  example . // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MyProfile {
+    string public name;
+    uint public number;
+
+    // Constructor runs once at deployment
+    constructor(string memory new_name, uint new_number) {
+        name = new_name;
+        number = new_number;
+    }
+}
+
+
+  
