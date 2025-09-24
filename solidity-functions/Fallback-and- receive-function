@@ -1,0 +1,59 @@
+receive vs fallback in Solidity
+🔹 receive()
+
+Special function to receive plain Ether transfers (no data).
+
+Declared as: receive() external payable.
+
+Runs only if data is empty.
+
+If not defined, Ether without data goes to fallback (if payable).
+
+🔹 fallback()
+
+Special function that acts as a default handler.
+
+Triggered when:
+
+Ether is sent with data, or
+
+A call is made to a non-existing function.
+
+Declared as: fallback() external payable.
+
+Only one fallback function per contract.
+
+✅ Key Points
+
+Both are optional.
+
+If both exist:
+
+Ether with no data → receive()
+
+Ether with data or wrong function → fallback()
+
+Must use payable if Ether should be accepted.  
+
+
+exampmle .
+
+
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+contract fallback_receive {
+
+fallback() external payable {
+
+}
+
+receive () external payable{}
+
+
+function getbalance () public view returns (uint)
+ {
+ return address (this).balance;
+}
+}
