@@ -1,0 +1,79 @@
+while loop
+
+Repeats the block of code as long as a condition is true.
+
+Used when the number of iterations is not fixed.
+
+example . 
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract  array {
+
+    uint[3] public arr;
+    uint public count;
+    function loop () public{
+        while (count < arr.length)
+        { arr[count]=count;
+        count++;
+    }
+}
+}  
+
+____________________________________________________________________________________________________________________________________________________________________________-
+
+
+
+for loop
+
+
+Repeats a block of code a fixed number of times.
+
+Best for situations where you know the number of iterations in advance.
+
+example.
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract  array {
+
+    uint[3] public arr;
+    uint public count;
+    function loop () public{
+         for ( uint i=count; i < arr.length; i++)
+         { 
+            arr[count]=count;
+            count++;
+         }
+}
+}
+
+_______________________________________________________________________________________________________________________________________________________________________________________
+
+3. do-while loop
+
+Executes the block at least once, then checks the condition.
+
+Ensures minimum one execution regardless of the condition.
+
+example .
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract  array {
+
+    uint[3] public arr;
+    uint public count;
+    function loop () public{
+         for ( uint i=count; i < arr.length; i++)
+        do { 
+            arr[count]=count;
+            count++;
+            
+        }
+while (count < arr.length);
+}
+}
+
