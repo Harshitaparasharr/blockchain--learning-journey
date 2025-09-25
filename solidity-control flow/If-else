@@ -1,0 +1,59 @@
+if-else in Solidity
+🔹 Definition
+
+if-else is a conditional statement used to execute code based on conditions.
+
+Similar to other programming languages (C, C++, Java, etc.).
+
+🔹 Key Points
+
+if checks a boolean condition (true/false).
+
+else if allows multiple conditions.
+
+else runs when none of the above are true.
+
+Conditions use operators like ==, !=, <, >, <=, >=, &&, ||.
+
+Often used in decision-making (e.g., access control, logic checks).
+
+✅ Quick Summary
+
+if → runs when condition is true.
+
+else if → additional conditions.
+
+else → default case if all fail.
+
+
+
+example . 
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract if_else {
+
+
+
+function check(int a) public pure returns (string memory)
+ { string memory value;
+
+
+    if ( a>0)
+    {
+
+        value = "greater than zero";
+    }
+else if ( a== 0) 
+{ 
+    value = "equal to zero";
+} 
+else
+{
+    value = "less than zero";
+}
+return value;
+}
+}
